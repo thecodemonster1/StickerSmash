@@ -1,8 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
 
-import Button from './components/Button';
-import ImageViewer from './components/ImageViewer';
+import Button from './components/Button.js';
+import ImageViewer from './components/ImageViewer.js';
 
 
 const img = require('./assets/images/background-image.png');
@@ -27,7 +27,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#25292e',
     alignItems: 'center',
-    // justifyContent: 'center',
   },
   footerContainer: {
     flex: 1 / 3,
