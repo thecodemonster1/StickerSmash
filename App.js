@@ -5,6 +5,8 @@ import Button from './components/Button.js';
 import ImageViewer from './components/ImageViewer.js';
 import * as ImagePicker from 'expo-image-picker'; 
 
+const img = require('./assets/images/background-image.png');
+
 export default function App() {
   const pickImageAsync = async () => {
     let result = await ImagePicker.launchImageLibraryAsync({
@@ -18,12 +20,7 @@ export default function App() {
       alert('You did not select any image.');
     }
   };
-}
 
-
-const img = require('./assets/images/background-image.png');
-
-export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.imageContainer}>
