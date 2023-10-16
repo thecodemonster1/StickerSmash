@@ -4,6 +4,8 @@ import { useState } from 'react';
 
 import Button from './components/Button.js';
 import ImageViewer from './components/ImageViewer.js';
+import IconButton from './components/IconButton.js';
+import CircleButton from './components/CircleButton.js';
 import * as ImagePicker from 'expo-image-picker'; 
 
 
