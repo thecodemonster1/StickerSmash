@@ -9,6 +9,7 @@ import CircleButton from './components/CircleButton.js';
 import EmojiPicker from "./components/EmojiPicker";
 import * as ImagePicker from 'expo-image-picker'; 
 import EmojiList from './components/EmojiList';
+import EmojiSticker from './components/EmojiSticker';
 
 
 const PlaceholderImage = require('./assets/images/background-image.png');
@@ -54,6 +55,7 @@ export default function App() {
       <View style={styles.imageContainer}>
         <ImageViewer placeholderImageSource={PlaceholderImage} 
         selectedImage={selectedImage}/>
+        {pickedEmoji !== null ? <EmojiSticker imageSize={60} stickerSource={pickedEmoji} /> : null}
       </View>
       {showAppOptions ? (
         <View style={styles.optionsContainer}>

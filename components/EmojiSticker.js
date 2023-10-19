@@ -2,7 +2,7 @@ import { View, Image } from 'react-native';
 
 export default function EmojiSticker({ imageSize, stickerSource }) {
   return (
-    <View style={{ top: -350, right: 50 }}>
+    <View style={{ top: -350, right: -50 }}>
       <Image
         source={stickerSource}
         resizeMode="contain"
