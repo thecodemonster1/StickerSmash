@@ -55,7 +55,19 @@ export default function App() {
   };
 
   const onSaveImageAsync = async () => {
-    // we will implement this later
+    try{
+      const localUri = await captureRef(imageRef, {
+        height: 440,
+        quality: 1,
+      });
+
+      await MediaLibrary.saveToLibraryAsync(localUri);
+      if (localUri){
+        alert("Saved!");
+      }
+    } catch(e) {
+      console.log(e);
+    }
   };
 
   return (
