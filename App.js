@@ -1,6 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
 import { useState } from 'react';
+import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { captureRef } from 'react-native-view-shot';
 
 import Button from './components/Button.js';
 import ImageViewer from './components/ImageViewer.js';
@@ -10,7 +12,6 @@ import EmojiPicker from "./components/EmojiPicker";
 import * as ImagePicker from 'expo-image-picker'; 
 import EmojiList from './components/EmojiList';
 import EmojiSticker from './components/EmojiSticker';
-import { GestureHandlerRootView } from "react-native-gesture-handler";
 import * as MediaLibrary from 'expo-media-library';
 
 
