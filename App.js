@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { captureRef } from 'react-native-view-shot';
 
@@ -18,6 +18,7 @@ import * as MediaLibrary from 'expo-media-library';
 const PlaceholderImage = require('./assets/images/background-image.png');
 
 export default function App() {
+  const imageRef = useRef();
   const [status, requestPermission] = MediaLibrary.usePermissions();
   const [pickedEmoji, setPickedEmoji] = useState(null);
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -61,9 +62,13 @@ export default function App() {
     <GestureHandlerRootView style={styles.container}>
       <View style={styles.container}>
         <View style={styles.imageContainer}>
-          <ImageViewer placeholderImageSource={PlaceholderImage} 
-          selectedImage={selectedImage}/>
-          {pickedEmoji !== null ? <EmojiSticker imageSize={60} stickerSource={pickedEmoji} /> : null}
+          <View ref={imageRef} collapsable={false}>
+            <ImageViewer placeholderImageSource={PlaceholderImage} 
+            selectedImage={selectedImage}/>
+            {pickedEmoji !== null ? (
+              <EmojiSticker imageSize={60} stickerSource={pickedEmoji} />
+            ) : null}
+          </View>
         </View>
         {showAppOptions ? (
           <View style={styles.optionsContainer}>
