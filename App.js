@@ -13,6 +13,8 @@ import * as ImagePicker from 'expo-image-picker';
 import EmojiList from './components/EmojiList';
 import EmojiSticker from './components/EmojiSticker';
 import * as MediaLibrary from 'expo-media-library';
+import domtoimage from 'dom-to-image';
+
 
 
 const PlaceholderImage = require('./assets/images/background-image.png');
