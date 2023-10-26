@@ -4,6 +4,7 @@ import { useState, useRef } from 'react';
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { captureRef } from 'react-native-view-shot';
 
+
 import Button from './components/Button.js';
 import ImageViewer from './components/ImageViewer.js';
 import IconButton from './components/IconButton.js';
@@ -117,7 +118,7 @@ export default function App() {
         <EmojiPicker isVisible={isModalVisible} onClose={onModalClose}>
         <EmojiList onSelect={setPickedEmoji} onCloseModal={onModalClose} />
         </EmojiPicker>
-        <StatusBar style="auto" />
+        <StatusBar style="light" />
       </View>
     </GestureHandlerRootView>
   );
