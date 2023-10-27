@@ -3,6 +3,7 @@ import { StyleSheet, View } from 'react-native';
 import { useState, useRef } from 'react';
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { captureRef } from 'react-native-view-shot';
+
 // import * as SplashScreen from 'expo-splash-screen';
 
 
